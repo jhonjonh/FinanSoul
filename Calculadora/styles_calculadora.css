@@ -1,0 +1,203 @@
+*,
+*::before, *::after {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+   background: linear-gradient(to right, #ff91007b, #edf1aa6e); 
+  
+}
+
+/*Estilizando o cabeçalho da página*/
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 9vw;
+}
+/* Estilizando logo e caixa de pesquisa */
+#conteiner1{
+  width: 100%;
+  height: 6vw;
+  display: flex;
+  flex-direction: row;
+  flex-direction: nowrap;
+  background-color: #FFF5D1;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+#c1_filho1{
+  height: 6vw;
+  margin-left: 10%;
+}
+#logo{
+  height: 6vw;
+}
+#c1_filho2{
+  margin-right: 10%;
+}
+/* Estilizando a lista */
+#conteiner2{
+  width: 100%;
+  height: 3vw;
+  background-color: #FBC779;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  z-index: 31;
+}
+li{
+  list-style-type: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 0px 6px #fff;
+}
+
+.btn {
+  font-size: 14px;
+  width: 80px;
+  height: 30px;
+  border-width: 0px;
+  color: white;
+  border-color: rgba(0, 0, 0, 1);
+  background: #E8A33B;
+  box-shadow: 3px 3px 10px rgb(99 98 98);
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: black;
+  border-color: white;
+  background: white;
+}
+
+
+.dark-mode {
+  background-color: rgb(31, 29, 29);
+  color: rgb(245, 244, 244);
+}
+#botao_pi{ /*botao pi da calculadora */
+ 
+  background-image: url("img/pi.png");
+  background-repeat: no-repeat;
+  background-size:40px; 
+  background-position-x: center;
+  background-position-y: center;
+
+  
+}
+#botao_raiz2{ /*botao raiz quadrada da calculadora */
+  background-image: url("img/square-root.png");
+  background-repeat: no-repeat;
+  background-size:40px; 
+  background-position-x: center;
+  background-position-y: center;
+ 
+}
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  /* 1ª linha minimo 120px, 2ª linha minimo 40 ,da 3ª em diante repete padrao 100pxpx*/
+  grid-template-rows: minmax(120px, auto) minmax(30px, auto) repeat(6, 100px); /* repeat(5,100px)*/
+ 
+}
+
+.calculator-grid > button{
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .45);
+}
+
+/* #############  Implementado calculadora simples e cientifica */
+#calc_simples{  /*ID do DIV  */
+  padding-left:5px;
+  padding-top: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  outline: none;
+  background-color: rgba(224, 221, 221, 0.856);
+  z-index: auto;
+}
+#calc_cientif{ /*ID do DIV  */
+  padding-left:5px;
+  padding-top: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  outline: none;
+  background-color: rgba(224, 221, 221, 0.856);
+}
+/* ######### FIM  Implementado calculadora simples e cientifica */
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1; /* saida ate final das colunas do grid*/
+  background-color: rgba(0, 0, 0, .80);/*alpha em 80% com background*/
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+}
+
+.output .operador_anterior {
+  color: rgba(255, 255, 255, 0.973);
+  font-size: 1.5rem;
+}
+ 
+.output .operador_atual{ /* current_operand */
+  color: white;
+  font-size: 2.5rem;
+}
+
+/*Estilizando o rodapé da página*/
+footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #FFF5D1;
+  width: 100%;
+  height: 4vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+}
+.imgFooter{
+  height: 2vw;
+  margin-left: 2vw;
+}

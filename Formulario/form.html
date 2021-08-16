@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="formStyle.css">
+  <link rel="shortcut icon" href="../img/favicon-32x32.png" />
+</head>
+
+<body>
+  <header id="topo">
+    <div id="conteiner1">
+      <div id="c1_filho1"> <img id="logo" src="../img/FinanSoul3.png" alt="Logo Div Textil"> </div>
+
+      <div>
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">
+          A +
+        </button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">
+          A -
+        </button>
+        <button id="darkModeButton" onclick="dark()">Dark Mode</button>
+      </div>
+    </div>
+
+    <nav>
+      <ul id="conteiner2">
+        <li><a href="../Home/Index.html">Home</a></li>
+        <li><a href="../Calculadora/calculadora.html">Calculadora</a></li>
+        <li><a href="../Formulario/form.html">Cadastro</a></li>
+        <li><a href="../Conversor/conversor.html">Conversor</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="mainContainer">
+      <h1>Cadastre-se Aqui</h1>
+      <form id="registro">
+        <div class="fullBox">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" placeholder="Digite o seu nome completo" data-uppercase>
+        </div>
+        <div class="fullBox">
+          <label for="cpf">CPF</label>
+          <input type="text" name="cpf" id="cpf" placeholder="Digite o número sem os pontos" data-max-length="11">
+        </div>
+        <div class="quarterBox spacing">
+          <label for="diaNascimento">Dia</label>
+          <input type="text" name="diaNascimento" id="diaNascimento" placeholder="Escolha o dia" data-validate-day>
+        </div>
+        <div class="quarterBox spacing">
+          <label for="mes">Mês</label>
+          <input type="number" max="12" min="1" name="mes" id="mes" placeholder="Escolha o mês" data-validate-month>
+        </div>
+        <div class="quarterBox spacing">
+          <label for="ano">Ano</label>
+          <input type="text" name="ano" id="ano" placeholder="Escolha o ano" data-validate-year>
+        </div>
+        <div class="halfBox spacing">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-email>
+        </div>
+        <div class="halfBox select">
+          <label for="genero" id="genero">Selecione o gênero:</label>
+          <select name="genero" id="genero" data-genero>
+            <option value="selecione"></option>
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="masculino">Outro</option>
+            <option value="masculino">Prefiro não dizer</option>
+          </select>
+        </div>
+        <div class="fullBox">
+          <input type="submit" id="btnSubmit" value="Enviar">
+        </div>
+      </form>
+      <div id="dadosConfirmados">
+        <p></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a href="https://www.facebook.com/" target="_blank"><img class="imgFooter" src="../img/facebook.png"
+          alt="facebook"></a>
+      <a href="https://www.instagram.com/FinanSoul/" target="_blank"><img class="imgFooter" src="../img/instagram.png"
+          alt="Instagram"></a>
+      <a href="https://www.youtube.com/channel/UCpss_g8Zej-gsYbBtpSJi_w" target="_blank"><img class="imgFooter"
+          src="../img/youtube.png" alt="YouTube"></a>
+    </div>
+    <div id="creditos">© Copyright FinanSoul</div>
+    <a href="#topo"><img class="imgFooter" src="../img/botao-voltar.png" alt="Voltar ao topo"></a>
+  </footer>
+  <script src="form.js"></script>
+</body>
+
+</html>

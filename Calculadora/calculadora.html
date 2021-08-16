@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora</title>
+  <link href="styles_calculadora.css" rel="stylesheet">
+  <script src="calculadora.js" defer></script>
+  <link rel="shortcut icon" href="../img/favicon-32x32.png" />
+</head>
+<body id="topo">
+  <header>
+    <div id="conteiner1">
+      <div id="c1_filho1"> <img id="logo" src="../img/FinanSoul3.png" alt="Logo Div Textil"> </div>
+
+      <div>
+          <button name="increase-font" id="increase-font" title="Aumentar fonte" class="btn">
+              A +
+          </button>
+          <button name="decrease-font" id="decrease-font" title="Diminuir fonte" class="btn">
+              A -
+          </button>
+          <button id="darkModeButton" onclick="dark()" class="btn">Dark Mode</button>
+      </div>
+  </div>
+
+    <nav>
+        <ul id="conteiner2">
+            <li><a href="../Home/Index.html">Home</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="../Formulario/form.html">Cadastro</a></li>
+            <li><a href="../Conversor/conversor.html">Conversor</a></li>
+        </ul>
+    </nav>
+</header>
+  <!-- calculadora dentro de um grid -->
+  <div class="calculator-grid">
+    <div class="output"> <!--Saida do calculo no topo-->
+      <div data-operador_anterior class="operador_anterior"></div> <!-- onde fica o numero pequeno da operacao anterior-->
+      <div data-operador_atual class="operador_atual"></div> <!--numero atual ,fonte maior -->
+    </div>
+    <!-- implementar mudanca de calc simples pra cienfica aqui -->
+    <!-- tirando DIV ele pega espacopor elemento -->
+    <div id="calc_simples" name="tipo_calc" class="span-two">
+            <input id="botao_simples" type="button" name="tipo_calc" value="simples"> Modo Simples
+    </div> 
+    <div id="calc_cientif" name="tipo_calc" class="span-two">
+            <input id="botao_cientif" type="button" name="tipo_calc" value="cienfica"> Modo Cientifica
+    </div> 
+     <!--FIM implementar mudanca de calc simples pra cienfica aqui -->
+    <!-- add aqui os botoes da calc cientifica -->
+    <button id="botao_raiz2" class="botao_deleta" data-operation></button> <!-- raiz quadrada -->
+    <button class="botao_deleta" data-operation>x²</button>       <!--  x^2 elevado ao 2 para dar resultado aperta = -->
+    <button class="botao_deleta" data-operation>x³</button>       <!--  x^3 elevado ao 3,para dar resultado aperta = -->
+    <button id="botao_pi" class="botao_deleta" data-number></button> <!--  pi 3,1415.. -->
+    <!-- Fim add botoes calc cientifica -->
+     <button data-all-clear class="span-two">AC</button>
+    <button data-delete>DEL</button>
+    <button data-operation>*</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>÷</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>+</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>-</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="span-two">=</button> <!--botao igual faz span de 2 colunas -->
+  </div>
+  <footer>
+    <div>
+        <a href="https://www.facebook.com/" target="_blank"><img class="imgFooter" src="../img/facebook.png"
+                alt="facebook"></a>
+        <a href="https://www.instagram.com/FinanSoul/" target="_blank"><img class="imgFooter"
+                src="../img/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCpss_g8Zej-gsYbBtpSJi_w" target="_blank"><img class="imgFooter"
+                src="../img/youtube.png" alt="YouTube"></a>
+    </div>
+    <div class="copyright">© Copyright FinanSoul</div>
+    <a href="#topo"><img class="imgFooter" src="../img/botao-voltar.png" alt="Voltar ao topo"></a>
+</footer>
+</body>
+</html>
